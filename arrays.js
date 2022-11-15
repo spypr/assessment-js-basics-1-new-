@@ -10,7 +10,7 @@ console.log(colorCopy)
 /* Add a fourth color to the end of the 'colorCopy' array using the push method. */
 
 //CODE HERE
-colorCopy.push(`blue`)
+colorCopy.push('blue')
 console.log(colorCopy)
 //////////////////PROBLEM 3////////////////////
 /*
@@ -37,11 +37,16 @@ console.log(middleNums)
 const bigOrSmallArray = [1, 99, 42, 69, 102, -10, 159, 352]
 
 // CODE HERE
-const answers = []
+let answers = []
 
-for (let i=0; i > bigOrSmallArray.length; i++) {
-  console.log
-
+for (let i = 0; i < bigOrSmallArray.length; i++) {
+  let currentNum = bigOrSmallArray[i]
+  
+  if(currentNum > 100){
+    answers.push('big')
+  } else {
+    answers.push('small')
+  }
 }
 
 console.log(answers)
