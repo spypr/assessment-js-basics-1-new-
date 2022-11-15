@@ -10,7 +10,7 @@
 */
 
 //CODE HERE
-let gitDefinition = (`A popular free and open source software program that is used for collaboartion to program source code during development.`)
+let gitDefinition = (`A popular free and open source version control system that is used for collaboartion to program source code during development.`)
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -27,7 +27,7 @@ let gitHubDeifinition = (`Cloud based hosting service of git code projects where
 */
 
 //CODE HERE
-let gitInit = (`creates a new repository in the current folder`)
+let gitInit = (`creates a new local repository for the project directory`)
 //////////////////PROBLEM 4////////////////////
 /*
     Create a variable called 'gitCloneDefinition'.  
@@ -35,7 +35,7 @@ let gitInit = (`creates a new repository in the current folder`)
 */
 
 //CODE HERE
-let gitCloneDefinition = (`Creates a copy of a repository and tells it where to put the copy of repository`)
+let gitCloneDefinition = (`Command to pull files and projects from places like gitHub`)
 //////////////////PROBLEM 5////////////////////
 /*
     Create a variable called 'gitStatusDefinition'.  
@@ -55,7 +55,7 @@ let gitStatusDefinition = (`Lists what staged changes have been made to a reposi
 
 //CODE HERE
 let gitAddDefinition = (`Allows you to add files to be tracked in the staging area`)
-let gitAddCode = (`git add`)
+let gitAddCode = (`git add .`)
 //////////////////PROBLEM 7////////////////////
 /*
     Create a variable called 'gitCommitDefinition'.  
@@ -66,8 +66,8 @@ let gitAddCode = (`git add`)
 */
 
 //CODE HERE
-let gitCommitDefinition = (`Allows you to create a snapshot of your repository.  It creates unique ID in the timeline when used.`)
-let gitCommitCode = (`git commit`)
+let gitCommitDefinition = (`Allows you to create a snapshot of your repository.  It creates unique ID in the timeline`)
+let gitCommitCode = (`git commit -m "initial commit"`)
 
 //////////////////PROBLEM 8////////////////////
 /*
