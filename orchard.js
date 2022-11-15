@@ -51,10 +51,17 @@ const pinkPrice = .55
 
 // CODE HERE
 
-for (let i = 0; i < Math.min(galaAcres.length,fujiAcres.length,pinkAcres.length); i++) {
-   var totalAcres = (galaAcres[i]+fujiAcres[i]+pinkAcres[i]);
+let totalAcres = 0
+
+for(let i = 0; i < 7; i++){
+    let fuji = fujiAcres[i]
+    let gala = galaAcres[i]
+    let pink = pinkAcres[i]
+    let dayTotalAcres = fuji + gala + pink
+    console.log(`The day's total acres picked is: ${dayTotalAcres}`)
+    totalAcres += dayTotalAcres
+    console.log(`The grand total after day${i + 1} is ${totalAcres}`)
 }
-console.log(totalAcres)
 
 // ***COMMENT***: I was able to get the total for one array.  But combining the arrays together created a problem that I was not able to solve. This is what I ended up with before time ran out
 
@@ -71,8 +78,9 @@ console.log(totalAcres)
 */
 
 // CODE HERE
+console.log('=====================')
 
-let averageDailyAcres = (totalAcres/7)
+let averageDailyAcres = totalAcres/7
 console.log(averageDailyAcres)
 //***COMMENT***: I took the total of the averageDailyAcres and divided it by 7 (7 days in the week) 
 
@@ -109,8 +117,14 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
+console.log('=====================')
 
+while(acresLeft > 0){
+    days++
+    acresLeft -= averageDailyAcres
+}
 
+console.log(`It took ${days} days to finish picking apples.`)
 
 // PROBLEM 4
 
@@ -137,15 +151,21 @@ let days = 0
 */
 
 // CODE HERE
+console.log('=====================')
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiTons = fujiAcres.slice(0)
+let galaTons = galaAcres.slice(0)
+let pinkTons = pinkAcres.slice(0)
 
+for(let i = 0; i < 7; i++){
+    fujiTons[i] *= 6.5
+    galaTons[i] *= 6.5
+    pinkTons[i] *= 6.5
+}
 
-
-
-
+console.log(`Fuji tons picked each day is: ${fujiTons}`)
+console.log(`Gala tons picked each day is: ${galaTons}`)
+console.log(`Pink tons picked each day is: ${pinkTons}`)
 
 // PROBLEM 5
 
@@ -165,11 +185,27 @@ let days = 0
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+console.log(`===================`)
 
+let fujiPounds = 0
+let galaPounds = 0
+let pinkPounds = 0
 
+for(let i = 0; i < 7; i++){
+    let dailyFujiTon = fujiTons[i]
+    let dailyGalaTon = galaTons[i]
+    let dailyPinkTon = pinkTons[i]
+
+    fujiPounds += (dailyFujiTon * 2000)
+    galaPounds += (dailyGalaTon * 2000)
+    pinkPounds += (dailyPinkTon * 2000)
+}
+
+console.log(`Total pounds of fuji apples was ${fujiPounds} lbs.`)
+console.log(`Total pounds of gala apples was ${galaPounds} lbs.`)
+console.log(`Total pounds of pink apples was ${pinkPounds} lbs.`)
+
+console.log(`===================`)
 
 
 
@@ -192,14 +228,13 @@ let days = 0
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujiPounds * fujiPrice
+let galaProfit = galaPounds * galaPrice
+let pinkProfit = pinkPounds * pinkPrice
 
-
-
-
-
+console.log(`Total income for fuji apples is ${fujiProfit}`)
+console.log(`Total income for gala apples is ${galaProfit}`)
+console.log(`Total income for pink apples is ${pinkProfit}`)
 
 // PROBLEM 7
 
@@ -212,3 +247,9 @@ let days = 0
 */
 
 // CODE HERE
+
+console.log(`======================`)
+
+let totalProfit = fujiProfit + galaProfit + pinkProfit
+
+console.log(`Total profit of all apples combined is ${totalProfit}`)
